@@ -1,0 +1,77 @@
+.skills {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: $blue;
+    color: $white;
+    width: 100%;
+
+    &__title {
+        margin: 64px 0;
+        font-size: 36px;
+        font-weight: bold;
+    }
+
+    &__subsection {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        margin-bottom: 72px;
+    }
+
+    &__emoji {
+        order: -1;
+        width: 288px;
+        height: 72px;
+        margin-bottom: 16px;
+    }
+    
+    &__subtitle {
+        font-size: 24px;
+        font-weight: bold;
+        margin: 16px 0 24px 0;
+    }
+
+    &__list {
+        padding: 0;
+        align-self: flex-start;
+    }
+
+    &__item {
+        list-style: none;
+        color: $blue-light;
+        margin-bottom: 24px;
+        &--green {
+            &:before {
+                content: " ";
+                background: url('../assets/icons/small-tick.svg');
+                display: inline-block;
+                width: 12px;
+                height: 9px;
+                margin-right: 12px;
+            }
+        }
+        &--blue {
+            &:before {
+                content: " ";
+                background: url('../assets/icons/small-tick-blue.svg');
+                display: inline-block;
+                width: 12px;
+                height: 9px;
+                margin-right: 12px;
+            }
+        }
+        &--dot {
+            &:before {
+                content: " ";
+                background: url('../assets/icons/dot.svg');
+                display: inline-block;
+                width: 12px;
+                height: 9px;
+                margin-right: 12px;
+            }
+        }
+    }
+}
