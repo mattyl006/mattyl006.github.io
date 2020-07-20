@@ -1,13 +1,23 @@
 @import "~normalize.css";
 
 @import "_variables";
-@import "modules/hello.scss";
+@import "modules/header.scss";
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300;700&display=swap');
 
 body {
-  background: $wtf;
-  color: #fff;
+  color: $text-default;
+  background-color: $white;
   display: flex;
   align-items: center;
   justify-content: center;
   min-height: 100vh;
+  font-family: 'Nunito', sans-serif;
+}
+
+.main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin: 0 16px;
 }
