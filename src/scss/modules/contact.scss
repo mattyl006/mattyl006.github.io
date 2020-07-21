@@ -9,13 +9,18 @@
     &__title {
         margin: 0;
         margin-top: 64px;
+        margin-bottom: 32px;
         color: $text-dark;
         font-size: 36px;
         font-weight: bold;
     }
 
     &__describe {
-
+        margin: 0;
+        margin-bottom: 56px;
+        font-size: 16px;
+        line-height: 32px;
+        text-align: center;
     }
 
     &__icons {
@@ -27,6 +32,16 @@
     }
 
     &__email {
-
+        width: 278px;
+        height: 48px;
+        background-color: $text-link;
+        border-radius: 64px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-decoration: none;
+        font-size: 20px;
+        font-weight: bold;
+        color: $white;
     }
 }
