@@ -4,7 +4,11 @@
   align-items: center;
   flex-direction: column;
   margin: 0 16px 88px 16px;
-  
+
+  @media (min-width: 960px) {
+    margin-bottom: 176px;
+  }
+
   &__image {
     margin-top: 98px;
     width: 96px;
@@ -18,21 +22,55 @@
     }
   }
 
+  &__div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+    @media (min-width: 960px) {
+      &:before {
+        content: " ";
+        background: url('../assets/icons/{.svg');
+        background-size: contain;
+        display: inline-block;
+        width: 84px;
+        height: 256px;
+        position: absolute;
+        top: -8px;
+        left: -80px;
+      }
+
+      &:after {
+        content: " ";
+        background: url('../assets/icons/}.svg');
+        background-size: contain;
+        display: inline-block;
+        width: 84px;
+        height: 256px;
+        position: absolute;
+        top: -8px;
+        right: -80px;
+      }
+    }
+  }
+
   &__title {
     font-size: 24px;
     line-height: 36px;
     font-weight: bold;
     color: $text-dark;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
+    text-align: center;
     margin: 0;
     margin-bottom: 16px;
-  }
-
-  &__span {
-    display: block;
+    max-width: 390px;
+    @media (min-width: 960px) {
+      max-width: 640px;
+      font-size: 32px;
+      line-height: 40px;
+      margin-bottom: 24px;
+      
+    }
   }
 
   &__strong {
@@ -54,17 +92,18 @@
       width: 16px;
       height: 16px;
     }
+    @media (min-width: 960px) {
+      font-size: 20px;
+      line-height: 40px;
+      max-width: 800px;
+      margin-bottom: 68px;
+    }
   }
 
   &__link {
     font-weight: bold;
     color: $text-link;
     text-decoration: none;
-    scroll-behavior: smooth;
-  }
-
-  &__emoji {
-    
   }
 
   &__email {
