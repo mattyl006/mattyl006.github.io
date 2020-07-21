@@ -26,7 +26,7 @@ fetch('https://api.github.com/users/Wirus006/repos?sort=created')
             <li class="projects__item">
                 <img
                     class="projects__icon"
-                    src="public/project-icon.svg"
+                    src="project-icon.svg"
                 />
                 <div class="projects__grid">
                     <p class="projects__indention">project:</p>
