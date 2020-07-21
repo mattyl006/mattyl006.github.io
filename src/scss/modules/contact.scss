@@ -13,6 +13,11 @@
         color: $text-dark;
         font-size: 36px;
         font-weight: bold;
+
+        @media (min-width: 960px) {
+            font-size: 48px;
+            margin: 80px 0 40px 0;
+        }
     }
 
     &__describe {
@@ -22,6 +27,19 @@
         line-height: 32px;
         text-align: center;
         max-width: 320px;
+
+        @media (min-width: 960px) {
+            font-size: 20px;
+            margin-bottom: 128px;
+            max-width: 782px;
+        }
+    }
+    
+    &__interaction {
+        @media (min-width: 960px) {
+            display: flex;
+            margin-bottom: 88px;
+        }
     }
 
     &__icons {
@@ -48,6 +66,10 @@
         justify-content: center;
         border-radius: 50%;
         margin-bottom: 64px;
+        @media (min-width: 960px) {
+            margin: 0;
+            margin-right: 24px;
+        }
     }
 
     &__email {
@@ -63,5 +85,9 @@
         font-weight: bold;
         color: $white;
         margin-bottom: 88px;
+        @media (min-width: 960px) {
+            margin: 0;
+            margin-left: 86px;
+        }
     }
 }

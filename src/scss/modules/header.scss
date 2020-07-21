@@ -1,9 +1,63 @@
+@keyframes hand {
+  0% {
+    transform: scale(1) rotate(0deg);
+  }
+  50% {
+    transform: scale(1.1) rotate(25deg);
+  }
+  0% {
+    transform: scale(1) rotate(0deg);
+  }
+}
+
 .header {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
   margin: 0 16px 88px 16px;
+  position: relative;
+
+  &__cloud {
+    display: none;
+    @media (min-width: 960px) {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: absolute;
+      top: 96px;
+      left: 206px;
+      font-size: 32px;
+      font-weight: bold;
+      color: $white;
+      background-color: $blue;
+      border-radius: 16px;
+      width: 230px;
+      height: 72px;
+      text-align: center;
+      position: relative;
+      &:after {
+        content: " ";
+        display: inline-block;
+        background: url('../assets/icons/hand.svg');
+        width: 32px;
+        height: 32px;
+        margin-left: 12px;
+        margin-bottom: 4px;
+        animation: hand 1s ease-in-out infinite;
+      }
+      &:before {
+        content: " ";
+        display: inline-block;
+        background: url('../assets/icons/speech-cloud.svg');
+        width: 18px;
+        height: 22px;
+        position: absolute;
+        top: 72px;
+        left: 32px;
+      }
+    }
+  }
 
   @media (min-width: 960px) {
     margin-bottom: 176px;
