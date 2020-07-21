@@ -1,9 +1,17 @@
 .contact {
     width: 100vw;
     background-color: $blue-light;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
 
     &__title {
-
+        margin: 0;
+        margin-top: 64px;
+        color: $text-dark;
+        font-size: 36px;
+        font-weight: bold;
     }
 
     &__describe {
