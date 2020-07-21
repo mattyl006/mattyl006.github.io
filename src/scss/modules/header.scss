@@ -7,10 +7,14 @@
   
   &__image {
     margin-top: 98px;
-    width: 112px;
-    height: 100px;
+    width: 96px;
+    height: 96px;
     border-radius: 50%;
     margin-bottom: 40px;
+    @media (min-width: 960px) {
+      width: 178px;
+      height: 178px;
+    }
   }
 
   &__title {
