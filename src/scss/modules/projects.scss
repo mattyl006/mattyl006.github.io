@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&display=swap");
 
 .projects {
     display: flex;
@@ -31,15 +31,16 @@
 
     &__item {
         list-style: none;
-        background: url('../assets/icons/mobile-github-project.svg');
+        background: url("../assets/icons/mobile-github-project.svg");
         background-size: contain;
+        background-repeat: no-repeat;
         width: 287px;
         height: 320px;
         display: flex;
-        justify-content: center;
+        justify-content: flex-start;
         align-items: center;
         flex-direction: column;
-        font-family: 'Roboto Mono', monospace;
+        font-family: "Roboto Mono", monospace;
     }
 
     &__grid {
@@ -54,16 +55,32 @@
         align-self: flex-start;
         margin-left: 28px;
         margin-bottom: 24px;
+        margin-top: 70px;
     }
 
     &__indention {
         margin: 0;
         font-size: 12px;
         text-align: end;
+        color: $grey4;
+        line-height: 20px;
     }
 
     &__repo {
         margin: 0;
         font-size: 12px;
+        line-height: 20px;
+
+        &--describe {
+            color: $grey5;
+        }
+
+        &--name {
+            color: $white;
+        }
+    }
+
+    &__link {
+        color: $text-link;
     }
 }
