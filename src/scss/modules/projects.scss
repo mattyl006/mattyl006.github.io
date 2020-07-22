@@ -11,7 +11,9 @@
         font-weight: bold;
         line-height: 48px;
         text-align: center;
+        margin: 0 0 32px;
         @media (min-width: $desktop) {
+            margin: 0 0 40px;
             font-size: 48px;
             line-height: 56px;
         }
@@ -73,7 +75,7 @@
     &__content {
         padding: 24px 16px;
         @media (min-width: $desktop) {
-            padding: 24px 48px 82px;
+            padding: 18px 48px 58px;
         }
     }
     &__grid {

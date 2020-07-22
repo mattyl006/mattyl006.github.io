@@ -21,6 +21,10 @@
         align-items: center;
         justify-content: center;
         position: relative;
+        margin-bottom: 8px;
+        @media (min-width: $desktop) {
+            margin-bottom: 24px;
+        }
     }
 
     &__image {
@@ -90,6 +94,8 @@
             font-size: 32px;
             line-height: 40px;
             max-width: 640px;
+            margin: 24px auto;
+
 
             &:before {
                 content: " ";
@@ -142,13 +148,13 @@
             font-size: 20px;
             line-height: 40px;
             max-width: 800px;
+            margin-bottom: 68px;
         }
     }
 
     &__strong {
         color: $blue;
         white-space: nowrap;
-
     }
 
     &__link {
