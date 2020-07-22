@@ -41,7 +41,7 @@ fetch('https://api.github.com/users/Wirus006/repos?sort=created')
                     <p class="projects__repo">
                         <a
                             class="projects__link"
-                            href="${html_url}"
+                            href="${homepage}"
                             >&lt;see here&gt;</a
                         >
                     </p>
@@ -49,7 +49,7 @@ fetch('https://api.github.com/users/Wirus006/repos?sort=created')
                     <p class="projects__repo">
                         <a
                             class="projects__link"
-                            href="${homepage}"
+                            href="${html_url}"
                             >&lt;source code&gt;</a
                         >
                     </p>
