@@ -12,55 +12,58 @@ import '../scss/main.scss';
 // repo url (code)
 // homepage url (demo)
 
-// fetch('https://api.github.com/users/Wirus006/repos?sort=created')
-//     .then(resp => resp.json())
-//     .then(resp => {
-//         for(let repo of resp) {
-//             const {name, description, html_url, homepage} = repo;
-//             const repositoryList = document.querySelector('.projects__list--js');
-//             if(description == null) {
-//                 description = "Brak opisu."
-//             }
+fetch('https://api.github.com/users/Wirus006/repos?sort=created')
+    .then(resp => resp.json())
+    .then(resp => {
+        for(let repo of resp) {
+            const {name, description, html_url, homepage} = repo;
+            const repositoryList = document.querySelector('.projects__grid--js');
+            if(description == null) {
+                description = "Brak opisu."
+            }
 
-//             let myTemplate = `
-//             <li class="projects__item">
-//                 <img
-//                     class="projects__icon"
-//                     src="project-icon.svg"
-//                 />
-//                 <div class="projects__grid">
-//                     <p class="projects__indention">project:</p>
-//                     <p class="projects__repo projects__repo--name">
-//                         ${name}
-//                     </p>
-//                     <p class="projects__indention">description:</p>
-//                     <p class="projects__repo projects__repo--describe">
-//                         ${description}
-//                     </p>
-//                     <p class="projects__indention">demo:</p>
-//                     <p class="projects__repo">
-//                         <a
-//                             class="projects__link"
-//                             href="${homepage}"
-//                             >&lt;see here&gt;</a
-//                         >
-//                     </p>
-//                     <p class="projects__indention">github:</p>
-//                     <p class="projects__repo">
-//                         <a
-//                             class="projects__link"
-//                             href="${html_url}"
-//                             >&lt;source code&gt;</a
-//                         >
-//                     </p>
-//                 </div>
-//             </li>`;
-//             repositoryList.innerHTML += myTemplate; 
-//         }
-//     })
-//     .catch(error => {
-//         console.log(`nie udało się pobrać danych: ${error}`);
-//     })
+            let myTemplate = `
+            <article class="project">
+                        <div class="project__bar">
+                            <span class="project__circle"></span>
+                            <span class="project__circle"></span>
+                            <span class="project__circle"></span>
+                        </div>
+                        <div class="project__content">
+                            <img src="project-icon.svg" alt="github icon">
+                            <h3 class="project__grid project__title">
+                                <span class="project__label">project:</span> <span>${name}</span>
+                            </h3>
+                            <p class="project__grid project__grid--description">
+                                <span class="project__label">description:</span>
+                                <span
+                                    >${description}</span
+                                >
+                            </p>
+                            <p class="project__grid">
+                                <span class="project__label">demo:</span>
+                                <span
+                                    >&lt;<a class="project__link" href="${homepage}" title="hydrapp - demo">see here</a
+                                    >&gt;</span
+                                >
+                            </p>
+                            <p class="project__grid">
+                                <span class="project__label">github:</span>
+                                <span
+                                    >&lt;<a class="project__link" href="${html_url}" title="hydrapp - code"
+                                        >source code</a
+                                    >&gt;</span
+                                >
+                            </p>
+                        </div>
+                    </article>
+            `;
+            repositoryList.innerHTML += myTemplate; 
+        }
+    })
+    .catch(error => {
+        console.log(`nie udało się pobrać danych: ${error}`);
+    })
 
 document.addEventListener("DOMContentLoaded", () => {
     //  little hack to detect if the user is on ie 11
