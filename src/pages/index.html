@@ -8,37 +8,40 @@
         <meta property="og:title" content="Portfolio" />
         <meta property="og:description" content="My portfolio website." />
         <meta property="og:url" content="wirus006.github.io/" />
-        <meta
-            property="og:image"
-            content="wirus006.github.io/og.png"
-        />
-        <!-- uncomment the line below to enable PWA  -->
-        <!-- <link rel="manifest" href="manifest.json" /> -->
+        <meta property="og:image" content="wirus006.github.io/og.png" />
+
         <meta name="apple-mobile-web-app-capable" content="yes" />
     </head>
     <body>
         <main class="main">
             <header class="header">
-                <span class="header__cloud">Hey there!</span>
-                <img
-                    class="header__image"
-                    src="../assets/img/photo.png"
-                    alt="My smiling face."
-                />
-                <div class="header__div">
+                <div class="header__image-container">
+                    <span class="header__cloud">Hey there!</span>
+                    <img
+                        class="header__image"
+                        src="../assets/img/photo.png"
+                        alt="My smiling face."
+                    />
+                </div>
+                <div class="header__content-container">
                     <h1 class="header__title">
                         My name is Mateusz and I'm an aspiring
-                        <strong class="header__strong">Frontend developer</strong>
+                        <strong class="header__strong"
+                            >Frontend developer</strong
+                        >
                         and a keen anime fan.
                     </h1>
                     <p class="header__describe">
                         You might be interested in checking the list of my
                         <a class="header__link" href="#sectionLink1">skills</a>.
                         Don’t forget to have a glimpse at
-                        <a class="header__link" href="#sectionLink2">my projects</a
-                        >. Currently I’m looking for a new challenges so if you have
-                        one -
-                        <a class="header__link" href="#sectionLink3">contact me</a>
+                        <a class="header__link" href="#sectionLink2"
+                            >my projects</a
+                        >. Currently I’m looking for a new challenges so if you
+                        have one -
+                        <a class="header__link" href="#sectionLink3"
+                            >contact me</a
+                        >
                     </p>
                 </div>
                 <a class="header__email" href="mailto:wirus006@gmail.com"
@@ -47,8 +50,8 @@
             </header>
             <section class="skills" id="section1">
                 <h2 class="skills__title">My skills</h2>
-                <div class="skills__div">
-                    <section class="skills__subsection">
+                <div class="skills__container">
+                    <article class="skills__subsection">
                         <h3 class="skills__subtitle">Working knowledge</h3>
                         <img
                             src="../assets/icons/muscle.svg"
@@ -71,16 +74,24 @@
                             <li class="skills__item skills__item--green">
                                 CSS grid
                             </li>
-                            <li class="skills__item skills__item--green">Figma</li>
-                            <li class="skills__item skills__item--green">Forms</li>
+                            <li class="skills__item skills__item--green">
+                                Figma
+                            </li>
+                            <li class="skills__item skills__item--green">
+                                Forms
+                            </li>
                             <li class="skills__item skills__item--green">
                                 JS: DOM manipulations
                             </li>
-                            <li class="skills__item skills__item--green">SASS</li>
-                            <li class="skills__item skills__item--green">Git</li>
+                            <li class="skills__item skills__item--green">
+                                SASS
+                            </li>
+                            <li class="skills__item skills__item--green">
+                                Git
+                            </li>
                         </ul>
-                    </section>
-                    <section class="skills__subsection">
+                    </article>
+                    <article class="skills__subsection">
                         <h3 class="skills__subtitle">Know something about</h3>
                         <img
                             src="../assets/icons/thinking.svg"
@@ -100,7 +111,12 @@
                             <li class="skills__item skills__item--blue">
                                 Progressive web apps
                             </li>
-                            <li class="skills__item skills__item--blue">Pygame</li>
+                            <li class="skills__item skills__item--blue">
+                                Objective programming
+                            </li>
+                            <li class="skills__item skills__item--blue">
+                                Pygame
+                            </li>
                             <li class="skills__item skills__item--blue">
                                 Spring boot
                             </li>
@@ -111,10 +127,12 @@
                                 Genetic algorithm
                             </li>
                             <li class="skills__item skills__item--blue">SQL</li>
-                            <li class="skills__item skills__item--blue">Scrum</li>
+                            <li class="skills__item skills__item--blue">
+                                Scrum
+                            </li>
                         </ul>
-                    </section>
-                    <section class="skills__subsection">
+                    </article>
+                    <article class="skills__subsection">
                         <h3 class="skills__subtitle">Want to learn</h3>
                         <img
                             src="../assets/icons/study.svg"
@@ -122,12 +140,20 @@
                             alt="study emoji"
                         />
                         <ul class="skills__list">
-                            <li class="skills__item skills__item--dot">React JS</li>
-                            <li class="skills__item skills__item--dot">Node JS</li>
-                            <li class="skills__item skills__item--dot">Vue JS</li>
-                            <li class="skills__item skills__item--dot">Unity C#</li>
+                            <li class="skills__item skills__item--dot">
+                                React JS
+                            </li>
+                            <li class="skills__item skills__item--dot">
+                                Node JS
+                            </li>
+                            <li class="skills__item skills__item--dot">
+                                Vue JS
+                            </li>
+                            <li class="skills__item skills__item--dot">
+                                Unity C#
+                            </li>
                         </ul>
-                    </section>
+                    </article>
                 </div>
             </section>
             <section class="projects" id="section2">
@@ -137,7 +163,35 @@
                     then, I’ve built some projects. Here’s the list of the
                     things I’ve done.
                 </p>
-                <ul class="projects__list projects__list--js"></ul>
+                <!-- <ul class="projects__list projects__list--js"></ul> -->
+                <div class="projects__grid">
+                    <article class="projects__item">
+                        <h3 class="projects__title">
+                            <span>project:</span> <span>hydrapp</span>
+                        </h3>
+                        <p>
+                            <span>description:</span>
+                            <span
+                                >Prosta aplikacja do liczenia wypitych szklanek
+                                wody danego dnia.</span
+                            >
+                        </p>
+                        <p>
+                            <span>demo:</span>
+                            <span
+                                >&lt;<a title="hydrapp - demo">see here</a
+                                >&gt;</span
+                            >
+                        </p>
+                        <p>
+                            <span>github:</span>
+                            <span
+                                >&lt;<a title="hydrapp - code">source code</a
+                                >&gt;</span
+                            >
+                        </p>
+                    </article>
+                </div>
             </section>
             <section class="contact" id="section3">
                 <h2 class="contact__title">Contact me</h2>
@@ -146,28 +200,38 @@
                     should talk!
                 </p>
                 <div class="contact__interaction">
-                    <div class="contact__icons">
-                        <a class="contact__link" href="https://github.com/Wirus006"
-                            ><img
-                                class="contact__image"
-                                src="../assets/icons/github.svg"
-                                alt="Github icon, click to check out my projects" /></a
-                        ><a
-                            class="contact__link"
-                            href="https://www.instagram.com/wiri006/"
-                            ><img
-                                class="contact__image"
-                                src="../assets/icons/instagram.svg"
-                                alt="Instagram icon, click to visit my instagram." /></a
-                        ><a
-                            class="contact__link contact__link--without-margin"
-                            href="https://www.facebook.com/Wirus006/"
-                            ><img
-                                class="contact__image"
-                                src="../assets/icons/facebook.svg"
-                                alt="Facebook icon, click to see my facebook profile."
-                        /></a>
-                    </div>
+                    <ul class="contact__socials">
+                        <li class="contact__item">
+                            <a
+                                class="contact__link"
+                                href="https://github.com/Wirus006"
+                                ><img
+                                    class="contact__image"
+                                    src="../assets/icons/github.svg"
+                                    alt="Github icon, click to check out my projects"
+                            /></a>
+                        </li>
+                        <li class="contact__item">
+                            <a
+                                class="contact__link"
+                                href="https://www.instagram.com/wiri006/"
+                                ><img
+                                    class="contact__image"
+                                    src="../assets/icons/instagram.svg"
+                                    alt="Instagram icon, click to visit my instagram."
+                            /></a>
+                        </li>
+                        <li class="contact__item">
+                            <a
+                                class="contact__link contact__link--without-margin"
+                                href="https://www.facebook.com/Wirus006/"
+                                ><img
+                                    class="contact__image"
+                                    src="../assets/icons/facebook.svg"
+                                    alt="Facebook icon, click to see my facebook profile."
+                            /></a>
+                        </li>
+                    </ul>
                     <a class="contact__email" href="mailto:wirus006@gmail.com"
                         >wirus006@gmail.com</a
                     >
