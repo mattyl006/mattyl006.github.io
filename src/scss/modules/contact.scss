@@ -1,7 +1,60 @@
 .contact {
     background-color: $blue-light;
-}
+    padding: 64px 16px 88px;
+    &__title {
+        color: $text-dark;
+        font-size: 36px;
+        line-height: 48px;
+        font-weight: bold;
+        text-align: center;
+    }
 
+    &__describe {
+        font-size: 16px;
+        line-height: 32px;
+        text-align: center;
+    }
+
+    &__interaction {
+        text-align: center;
+    }
+
+    &__socials {
+        list-style-type: none;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        margin: 56px 64px;
+    }
+
+    &__item {
+        margin: 0 12px;
+    }
+
+    &__link {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 0;
+        background: #ffffff;
+        box-shadow: 0px 4px 8px rgba(16, 112, 202, 0.15);
+        width: 48px;
+        height: 48px;
+        border-radius: 50%;
+    }
+    
+    &__email {
+        display: inline-block;
+        color: $white;
+        background-color: $text-link;
+        text-decoration: none;
+        border-radius: 64px;
+        font-size: 20px;
+        font-weight: bold;
+        line-height: 40px;
+        padding: 4px 24px;
+    }
+}
 
 // .contact {
 //     width: 100vw;
@@ -39,7 +92,7 @@
 //             max-width: 782px;
 //         }
 //     }
-    
+
 //     &__interaction {
 //         @media (min-width: 960px) {
 //             display: flex;
