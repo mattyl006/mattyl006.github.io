@@ -12,29 +12,70 @@
 
 .header {
     padding: 74px 16px 88px;
+    @media (min-width: $desktop) {
+        padding-bottom: 176px;
+    }
 
     &__image-container {
         display: flex;
         align-items: center;
         justify-content: center;
+        position: relative;
     }
 
     &__image {
         width: 96px;
         height: 96px;
         border-radius: 50%;
-        @media (min-width: 960px) {
+        box-sizing: content-box;
+        border: 16px solid #f6f9fd;
+        @media (min-width: $desktop) {
             width: 178px;
             height: 178px;
+            border: 24px solid #f6f9fd;
         }
+    }
+
+    &__bubble {
+        position: absolute;
+        top: -26px;
+        left: calc(50% + 90px);
     }
 
     &__cloud {
         display: none;
+        @media (min-width: $desktop) {
+            display: block;
+            color: $white;
+            background-color: $blue;
+            font-size: 32px;
+            font-weight: bold;
+            padding: 16px 19px;
+            border-radius: 16px;
+            position: relative;
+            &:before {
+                content: "";
+                background: url("../assets/icons/speech-cloud.svg");
+                width: 18px;
+                height: 22px;
+                position: absolute;
+                top: 100%;
+                left: 32px;
+            }
+            &:after {
+                content: "";
+                background: url("../assets/icons/hand.svg");
+                display: inline-block;
+                width: 32px;
+                height: 32px;
+                margin-left: 8px;
+                margin-bottom: -4px;
+            }
+        }
     }
 
     &__content-container {
-      text-align: center;
+        text-align: center;
     }
 
     &__title {
@@ -42,7 +83,38 @@
         line-height: 36px;
         text-align: center;
         color: $text-dark;
-        // max-width: 390px;
+        max-width: 390px;
+        margin: 16px auto;
+        position: relative;
+        @media (min-width: $desktop) {
+            font-size: 32px;
+            line-height: 40px;
+            max-width: 640px;
+
+            &:before {
+                content: " ";
+                background: url("../assets/icons/{.svg");
+                background-size: contain;
+                display: inline-block;
+                width: 84px;
+                height: 256px;
+                position: absolute;
+                top: 0;
+                right: 112%;
+            }
+
+            &:after {
+                content: " ";
+                background: url("../assets/icons/}.svg");
+                background-size: contain;
+                display: inline-block;
+                width: 84px;
+                height: 256px;
+                position: absolute;
+                top: 0;
+                left: 112%;
+            }
+        }
     }
 
     &__describe {
@@ -50,7 +122,27 @@
         font-size: 16px;
         line-height: 32px;
         text-align: center;
-        margin-bottom: 48px;
+        max-width: 390px;
+        margin: 0 auto 48px;
+        &:after {
+            content: " ";
+            background: url("../assets/icons/smile.svg");
+            background-size: contain;
+            display: inline-block;
+            width: 16px;
+            height: 16px;
+            margin-left: 2px;
+            margin-bottom: -4px;
+            @media (min-width: $desktop) {
+                width: 20px;
+                height: 20px;
+            }
+        }
+        @media (min-width: $desktop) {
+            font-size: 20px;
+            line-height: 40px;
+            max-width: 800px;
+        }
     }
 
     &__strong {
@@ -60,7 +152,6 @@
     &__link {
         font-weight: bold;
         color: $text-link;
-        text-decoration: none;
     }
 
     &__email {
