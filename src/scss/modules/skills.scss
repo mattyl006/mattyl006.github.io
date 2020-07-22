@@ -1,94 +1,161 @@
 .skills {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
     background-color: $blue;
     color: $white;
-    width: 100vw;
-
+    padding: 64px 16px 88px;
     &__title {
-        margin: 64px 0;
-        font-size: 36px;
         font-weight: bold;
-        @media (min-width: 960px) {
-            margin-top: 80px;
-            margin-bottom: 128px;
-            font-size: 48px;
-        }
-    }
-
-    &__container {
-        @media (min-width: 960px) {
-            display: flex;
-            align-items: flex-start;
-            justify-content: space-around;
-            min-width: 960px;
-        }
+        text-align: center;
+        font-size: 36px;
+        line-height: 48px;
     }
 
     &__subsection {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-        margin-bottom: 64px;
-        @media (min-width: 960px) {
-            margin-bottom: 80px;
-        }
+        margin-top: 64px;
     }
 
     &__emoji {
-        order: -1;
-        max-width: 288px;
-        height: 72px;
-        margin-bottom: 16px;
+        display: block;
+        height: 64px;
+        width: 64px;
+        margin: 0 auto;
     }
-    
+
     &__subtitle {
-        font-size: 24px;
         font-weight: bold;
-        margin: 16px 0 24px 0;
+        text-align: center;
+        font-size: 24px;
+        line-height: 44px;
+        margin: 16px 0 24px;
     }
 
     &__list {
+        color: $blue-light;
+        width: 288px;
+        margin: 0 auto;
+        list-style-type: none;
         padding: 0;
-        align-self: flex-start;
     }
 
     &__item {
-        list-style: none;
-        color: $blue-light;
-        margin-bottom: 24px;
-        &--green {
-            &:before {
-                content: " ";
-                background: url('../assets/icons/small-tick.svg');
-                display: inline-block;
-                width: 12px;
-                height: 9px;
-                margin-right: 12px;
-            }
+        font-size: 16px;
+        line-height: 24px;
+        padding: 0 0 0 24px;
+        position: relative;
+        margin: 0 0 16px;
+        &:before {
+            position: absolute;
+            left: 4px;
+            top: 8px;
+            content: "";
+            background: url("../assets/icons/small-tick.svg");
+            display: inline-block;
+            width: 12px;
+            height: 9px;
         }
         &--blue {
             &:before {
-                content: " ";
-                background: url('../assets/icons/small-tick-blue.svg');
-                display: inline-block;
-                width: 12px;
-                height: 9px;
-                margin-right: 12px;
+                background: url("../assets/icons/small-tick-blue.svg");
             }
         }
         &--dot {
             &:before {
-                content: " ";
-                background: url('../assets/icons/dot.svg');
-                display: inline-block;
-                width: 12px;
-                height: 9px;
-                margin-right: 12px;
+                background: url("../assets/icons/dot.svg");
             }
         }
     }
 }
+
+// .skills {
+//     display: flex;
+//     justify-content: center;
+//     align-items: center;
+//     flex-direction: column;
+//     background-color: $blue;
+//     color: $white;
+//     width: 100vw;
+
+//     &__title {
+//         margin: 64px 0;
+//         font-size: 36px;
+//         font-weight: bold;
+//         @media (min-width: 960px) {
+//             margin-top: 80px;
+//             margin-bottom: 128px;
+//             font-size: 48px;
+//         }
+//     }
+
+//     &__container {
+//         @media (min-width: 960px) {
+//             display: flex;
+//             align-items: flex-start;
+//             justify-content: space-around;
+//             min-width: 960px;
+//         }
+//     }
+
+//     &__subsection {
+//         display: flex;
+//         justify-content: center;
+//         align-items: center;
+//         flex-direction: column;
+//         margin-bottom: 64px;
+//         @media (min-width: 960px) {
+//             margin-bottom: 80px;
+//         }
+//     }
+
+//     &__emoji {
+//         order: -1;
+//         max-width: 288px;
+//         height: 72px;
+//         margin-bottom: 16px;
+//     }
+
+//     &__subtitle {
+//         font-size: 24px;
+//         font-weight: bold;
+//         margin: 16px 0 24px 0;
+//     }
+
+//     &__list {
+//         padding: 0;
+//         align-self: flex-start;
+//     }
+
+//     &__item {
+//         list-style: none;
+//         color: $blue-light;
+//         margin-bottom: 24px;
+//         &--green {
+//             &:before {
+//                 content: " ";
+//                 background: url('../assets/icons/small-tick.svg');
+//                 display: inline-block;
+//                 width: 12px;
+//                 height: 9px;
+//                 margin-right: 12px;
+//             }
+//         }
+//         &--blue {
+//             &:before {
+//                 content: " ";
+//                 background: url('../assets/icons/small-tick-blue.svg');
+//                 display: inline-block;
+//                 width: 12px;
+//                 height: 9px;
+//                 margin-right: 12px;
+//             }
+//         }
+//         &--dot {
+//             &:before {
+//                 content: " ";
+//                 background: url('../assets/icons/dot.svg');
+//                 display: inline-block;
+//                 width: 12px;
+//                 height: 9px;
+//                 margin-right: 12px;
+//             }
+//         }
+//     }
+// }

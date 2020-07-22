@@ -20,16 +20,5 @@ html {
 body {
   color: $text-default;
   background-color: $white;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  min-height: 100vh;
   font-family: 'Nunito', sans-serif;
-}
-
-.main {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
 }
