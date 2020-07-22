@@ -1,115 +1,182 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&display=swap");
 
 .projects {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    margin-left: 16px;
-    margin-right: 16px;
-    margin-bottom: 64px;
-
+    padding: 64px 16px 88px;
     &__title {
         color: $text-dark;
         font-size: 36px;
         font-weight: bold;
-        margin: 64px 0 32px 0;
-        @media (min-width: 960px) {
-            font-size: 48px;
-            margin: 80px 0 40px 0;
-        }
+        line-height: 48px;
+        text-align: center;
     }
 
     &__describe {
         font-size: 16px;
         line-height: 32px;
         text-align: center;
-        max-width: 390px;
-        margin: 0;
+        font-weight: 300;
         margin-bottom: 46px;
-        @media (min-width: 960px) {
-            font-size: 20px;
-            margin-bottom: 128px;
-            max-width: 782px;
-        }
     }
+}
 
-    &__list {
-        padding: 0;
-        margin: 0;
-        @media (min-width: 960px) {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            min-width: 960px;
-        }
-    }
-
-    &__item {
-        list-style: none;
-        background: url("../assets/icons/mobile-github-project.svg");
-        background-size: contain;
-        background-repeat: no-repeat;
-        width: 287px;
-        height: 320px;
+.project {
+    font-family: Roboto Mono;
+    font-size: 12px;
+    line-height: 24px;
+    background-color: $grey2;
+    color: $grey5;
+    border-radius: 16px;
+    box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.25);
+    overflow: hidden;
+    &__bar {
+        height: 40px;
+        background-color: $grey1;
         display: flex;
-        justify-content: flex-start;
         align-items: center;
-        flex-direction: column;
-        font-family: "Roboto Mono", monospace;
-        @media (min-width: 960px) {
-            background: url("../assets/icons/github-project.svg");
-            background-size: contain;
-            background-repeat: no-repeat;
-            width: 100%;
-            max-width: 580px;
-            height: 324px;
-        }
+        padding: 0 0 0 16px;
     }
-
+    &__circle {
+        display: block;
+        width: 8px;
+        height: 8px;
+        background-color: $grey3;
+        border-radius: 50%;
+        margin-right: 8px;
+    }
+    &__content {
+        padding: 24px 16px;
+    }
     &__grid {
         display: grid;
-        grid-template-columns: 1fr 1fr;
-        column-gap: 4px;
-        row-gap: 8px;
-        margin-right: 24px;
-        @media (min-width: 960px) {
-            grid-template-columns: 1fr 3fr
-        }
+        grid-template-columns: 102px 1fr;
+        grid-column-gap: 8px;
     }
-
-    &__icon {
-        align-self: flex-start;
-        margin-left: 28px;
-        margin-bottom: 16px;
-        margin-top: 64px;
-        @media (min-width: 960px) {
-            margin-left: 60px;
-        }
-    }
-
-    &__indention {
-        margin: 0;
-        font-size: 12px;
-        text-align: end;
+    &__label {
+        display: block;
+        text-align: right;
         color: $grey4;
-        line-height: 20px;
+        font-weight: normal;
     }
-
-    &__repo {
-        margin: 0;
+    &__title {
+        font-weight: bold;
         font-size: 12px;
-        line-height: 20px;
-
-        &--describe {
-            color: $grey5;
-        }
-
-        &--name {
-            color: $white;
-        }
+        color: $white;
     }
-
     &__link {
         color: $text-link;
     }
 }
+
+// .projects {
+//     display: flex;
+//     justify-content: center;
+//     align-items: center;
+//     flex-direction: column;
+//     margin-left: 16px;
+//     margin-right: 16px;
+//     margin-bottom: 64px;
+
+//     &__title {
+//         color: $text-dark;
+//         font-size: 36px;
+//         font-weight: bold;
+//         margin: 64px 0 32px 0;
+//         @media (min-width: 960px) {
+//             font-size: 48px;
+//             margin: 80px 0 40px 0;
+//         }
+//     }
+
+//     &__describe {
+//         font-size: 16px;
+//         line-height: 32px;
+//         text-align: center;
+//         max-width: 390px;
+//         margin: 0;
+//         margin-bottom: 46px;
+//         @media (min-width: 960px) {
+//             font-size: 20px;
+//             margin-bottom: 128px;
+//             max-width: 782px;
+//         }
+//     }
+
+//     &__list {
+//         padding: 0;
+//         margin: 0;
+//         @media (min-width: 960px) {
+//             display: grid;
+//             grid-template-columns: 1fr 1fr;
+//             min-width: 960px;
+//         }
+//     }
+
+//     &__item {
+//         list-style: none;
+//         background: url("../assets/icons/mobile-github-project.svg");
+//         background-size: contain;
+//         background-repeat: no-repeat;
+//         width: 287px;
+//         height: 320px;
+//         display: flex;
+//         justify-content: flex-start;
+//         align-items: center;
+//         flex-direction: column;
+//         font-family: "Roboto Mono", monospace;
+//         @media (min-width: 960px) {
+//             background: url("../assets/icons/github-project.svg");
+//             background-size: contain;
+//             background-repeat: no-repeat;
+//             width: 100%;
+//             max-width: 580px;
+//             height: 324px;
+//         }
+//     }
+
+//     &__grid {
+//         display: grid;
+//         grid-template-columns: 1fr 1fr;
+//         column-gap: 4px;
+//         row-gap: 8px;
+//         margin-right: 24px;
+//         @media (min-width: 960px) {
+//             grid-template-columns: 1fr 3fr
+//         }
+//     }
+
+//     &__icon {
+//         align-self: flex-start;
+//         margin-left: 28px;
+//         margin-bottom: 16px;
+//         margin-top: 64px;
+//         @media (min-width: 960px) {
+//             margin-left: 60px;
+//         }
+//     }
+
+//     &__indention {
+//         margin: 0;
+//         font-size: 12px;
+//         text-align: end;
+//         color: $grey4;
+//         line-height: 20px;
+//     }
+
+//     &__repo {
+//         margin: 0;
+//         font-size: 12px;
+//         line-height: 20px;
+
+//         &--describe {
+//             color: $grey5;
+//         }
+
+//         &--name {
+//             color: $white;
+//         }
+//     }
+
+//     &__link {
+//         color: $text-link;
+//     }
+// }
