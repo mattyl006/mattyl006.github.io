@@ -100,7 +100,7 @@
                 height: 256px;
                 position: absolute;
                 top: 0;
-                right: 112%;
+                right: 111%;
             }
 
             &:after {
@@ -112,7 +112,7 @@
                 height: 256px;
                 position: absolute;
                 top: 0;
-                left: 112%;
+                left: 111%;
             }
         }
     }
@@ -147,6 +147,8 @@
 
     &__strong {
         color: $blue;
+        white-space: nowrap;
+
     }
 
     &__link {
