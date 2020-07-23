@@ -1,12 +1,12 @@
-@keyframes hand {
+@keyframes wave {
     0% {
-        transform: scale(1) rotate(0deg);
+        transform: scale(1) rotate(-10deg);
     }
     50% {
-        transform: scale(1.1) rotate(25deg);
+        transform: scale(1.1) rotate(30deg);
     }
-    0% {
-        transform: scale(1) rotate(0deg);
+    100% {
+        transform: scale(1) rotate(-10deg);
     }
 }
 
@@ -74,6 +74,7 @@
                 height: 32px;
                 margin-left: 8px;
                 margin-bottom: -4px;
+                animation: wave 1.5s ease-in-out infinite;
             }
         }
     }
