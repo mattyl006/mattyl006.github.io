@@ -2,7 +2,7 @@
 
 # Mateusz Tylka - Computer Science Student
 
-This is my portfolio website.
+This is my portfolio website, where you can check out my abilities.
 
 ## Tools
 
