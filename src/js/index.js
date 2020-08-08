@@ -48,7 +48,7 @@ fetch('https://api.github.com/users/Wirus006/repos?sort=created')
                         </div>
                     </article>
             `;
-            if(homepage) {
+            if(homepage && (name != 'Wirus006.github.io')) {
               repositoryList.innerHTML += myTemplate;
             } 
         }
