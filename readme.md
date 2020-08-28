@@ -1,4 +1,4 @@
-![cover](https://wirus006.github.io/og.gif)
+![cover](https://wirus006.github.io/og.png)
 
 # Mateusz Tylka - Computer Science Student
 
