@@ -6,7 +6,7 @@ import '../scss/main.scss';
 // repo url (code)
 // homepage url (demo)
 
-fetch('https://api.github.com/users/Wirus006/repos?sort=created')
+fetch('https://api.github.com/users/mattyl006/repos?sort=created')
     .then(resp => resp.json())
     .then(resp => {
         for(let repo of resp) {
@@ -48,7 +48,7 @@ fetch('https://api.github.com/users/Wirus006/repos?sort=created')
                         </div>
                     </article>
             `;
-            if(homepage && (name != 'Wirus006.github.io')) {
+            if(homepage && (name != 'mattyl006.github.io')) {
               repositoryList.innerHTML += myTemplate;
             } 
         }
